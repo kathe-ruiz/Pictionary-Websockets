@@ -1,0 +1,175 @@
+body
+{
+	background-color:#999 !important;	
+}
+#contenido
+{
+	background-color:#BBE1C8;
+	font-family:"Helvetica",Arial;	
+	margin:5% 10%;
+	width: 80%;
+	height:405px;
+}
+#form
+{
+	text-align:left;
+}
+
+#footer
+{
+	position: absolute;
+	bottom:0px;
+	background-color:#000;
+	font-size:10px;
+	width:100%;
+	color:#ABC8A4;
+	text-align:center;
+}
+#footer p
+{
+	display:inline-block;
+	margin-right:100px;
+}
+.pantalla
+{
+	
+
+}
+#ingresaNombre{
+	
+}
+#usuariosCon
+{
+	display:inline-block;
+	background-color:#FFF;
+	color:#000;
+	border: 1px solid #666;
+	position:absolute;
+	width: 22%;
+	height:437px;
+}
+#contChat
+{
+	display: inline-block;
+	width:25%;		
+	background-color:#FFF;
+	border: 1px solid #666;	
+}
+#chat
+{
+	height:405px;
+	overflow: scroll;
+}
+#chat p
+{
+	border-bottom:solid;
+	border-width:1px;
+}
+#formMsg
+{
+	width:100%;	
+}
+#msg
+{
+	width: 70%	
+}
+#contModal{
+	margin-top: 120px;
+	width: 50%; 	
+}
+#name{
+	width: 90%;	
+}
+/*
+style by kathe
+*/
+#contenido {
+background-color: #999999;
+
+}
+#can{
+   background: white;
+    
+    height: 421px;
+   
+    display: inline-block;
+}
+canvas#canvas {
+          
+       
+        border: 2px solid #000;
+        cursor: pointer;
+      }
+#info
+{
+    width: 37%;
+  
+margin-bottom: 1%;
+
+}
+.modal-footer{
+    text-align: left !important;
+}
+#info1{
+float: right;
+margin-right: 44%;
+color: white;
+margin-top: 2%;
+}
+#nombre{
+   float: right;
+color: white;
+margin-right: -32%;
+margin-top: 2%;    
+}
+#jugador
+{
+    color:white;
+}
+#adivinar{
+    float: right;
+}
+.navbar-inverse
+{
+    background: #7AE297 !important;
+ }
+ #sesion
+ {
+     color:white;
+ }
+ #time
+ {
+     float: right;
+margin-right: -50%;
+font-size: x-large;
+ }
+ #btAdivinar
+ {
+     width: 42%;
+ }
+ /*Media*/
+ @media(max-width:1000px){
+    #info
+    {
+        width: 69%;
+        margin-top: 10%;
+    }
+    #clean
+    {
+        position: fixed;
+   top: 77%;
+   left: 10%;
+    }
+    #can
+    {
+        vertical-align: top;
+        margin-top: 6%;
+    }
+    #contChat
+    {
+        margin-top: 6%;
+    }
+    #usuariosCon{
+        margin-top: 5%;
+    }
+ }

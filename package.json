@@ -1,0 +1,14 @@
+{
+	"name": "pizarra",
+	"version": "0.0.1",
+	"author": "Katherine Ruiz",	
+	"dependencies": {
+		"express": ">= 2.5.0",
+		"jade": ">= 0.26.3",
+		"socket.io": ">=0.8.7"
+	},
+         "engines": {
+        "node": "0.10.x",
+        "npm": "1.2.x"
+        }
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link href="../styles/stylePrincipal.css" rel="stylesheet">
+    <link href="../styles/bootstrap.min.css" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../scripts/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+	<script src="../scripts/scriptPrincipal.js"></script>
+        <script src="../scripts/modernizr.js"></script>
+       
+    </head>
+    
+    <body>
+        <div id="contenido">
+        	<nav>    
+                <div id="menu" class="navbar navbar-inverse navbar-fixed-top">
+                  <div class="container">                  
+                    <div class="navbar-header">                    	
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+                    <div class="navbar-collapse collapse">
+                       
+                      <ul class="nav navbar-nav">                      
+                        <li id="iniciar"><a id="sesion" data-toggle="modal" href="#actModal">Iniciar Sesi&oacute;n</a></li>   
+                        <li id="logout" onclick="logoutface();" ><a ></a></li> 
+                        <li id="logoutNormal" onclick="salir();" ><a ></a></li>  
+                      </ul>  
+                        <div>
+                            
+                            <span id="info1">Bienvenid@</span>
+                            <span id="nombre"></span>
+                        </div>
+		        </div><!--/.navbar-collapse -->
+        	</nav>	            
+            
+            <div class="modal fade" id="actModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                
+                  <div class="modal-dialog">
+                    <div class="modal-content" id="contModal">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Iniciar Sesi&oacute;n</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form id="formNombre" class="form">
+                        	<input type="text" class="form-control" name="name" id="name" placeholder="Ingrese su nombre de usuario">                     
+                      </div>
+                      <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" value="Enviar" class="btn btn-primary" id="setNick">
+                        </form>
+                          </br>
+                          <div id="fb-root"></div>
+                          <fb:login-button show-faces="true" width="200" max-rows="1" id="face-login"></fb:login-button>
+                        
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->	
+            
+                <!-- modal adivinar-->
+                <div class="modal fade" id="modal-adivinar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                
+                  <div class="modal-dialog">
+                    <div class="modal-content" id="contModal">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Adivina la palabra que estan dibujando</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                        	<input type="text" class="form-control" name="palabra" id="palabra" placeholder="Ingrese La palabra">                     
+                      </div>
+                      <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                            <input  value="Adivinar" class="btn btn-primary" onclick="adivinar();" id="btAdivinar">
+                        
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->	
+            
+            
+            <div id="ingresaNombre">
+                <div id="setNombre" class="plantilla">
+                    
+                        
+                   
+                </div>
+            </div> 
+                
+                <div id="info">
+                    <div class="btn btn-info" id="start" onclick="jugar();">Jugar</div>
+                    <span id="turno">El turno es de:</span>
+                    <span id="jugador"></span>
+                    <span id="time">0</span>
+                    <button class="btn btn-success" id="adivinar" onclick="modalAdivinar();" >adivinar</button>
+                    
+                </div>
+                <div id="sub-cont">   
+                <div id="can">
+                    <!--
+                    <form>
+                        <input id="clean" type="button" value="Limpiar"></form>
+                    -->
+                <canvas id="canvas"  height="422" style="position:relative;border:2px solid;"></canvas>
+                
+            </div>
+                <input id="clean" class="btn btn-default" type='button' value='Limpiar'>
+            <div id="contChat" class="panel">
+            	<div id="miChat">
+                	<div id="chat">
+                    	<div id="chatInsite" class="panel-body">
+                        	
+                        </div>
+                    </div>
+                    <form id="formMsg" class="form">
+                            	<input type="text" name="msg" id="msg" required>
+                                <input type="submit" value="Enviar" class="btn btn-primary btn-sm" id="sendM">                                
+                            </form>
+                </div>
+            </div>                   
+            <div id="usuariosCon" class="panel panel-info">
+            	<div class="panel-heading">Usuarios Conectados </div>               
+                <div id="users" class="panel-body">
+                
+                </div>
+            </div>
+                </div><!--sub-cont-->       
+        </div>
+    </body>
+</html>

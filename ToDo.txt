@@ -1,0 +1,1 @@
+EL boton "adivinar" no puede puede mostrar el modal si no se ha iniciado sesion
